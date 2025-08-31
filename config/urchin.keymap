@@ -111,9 +111,9 @@
 		symbol2_layer {
 			label = "Symbol 2";
 			bindings = <
-			&none &none &none &none &none           &none &none &none &none &none 
-			&none &none &none &none &none           &none &none &none &none &none
-			&none &none &none &none &none           &none &none &none &none &none
+			&none &none &none &none &kp SQT         &none &kp LPAR &kp RPAR &none &none 
+			&none &none &none &none &none           &none &kp LBRC &kp RBRC &none &none
+			&none &none &none &none &none           &none &kp LBKT &kp RBKT &none &none
 			                  &none &none           &none &none 
 			>;
 		};
