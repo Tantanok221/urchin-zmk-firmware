@@ -67,10 +67,54 @@
 		movement_layer {
 			label = "Movement";
 			bindings = <
-			&none &kp LC(LEFT)      &kp UP    &kp LC(RIGHT)       &none           &none &kp NUMBER_0       &kp DOLLAR         &none                &none 
+			&none &kp LC(LEFT)      &kp UP    &kp LC(RIGHT)       &none           &none &kp KP_NUMBER_0       &kp DOLLAR         &none                &none 
 			&none &kp LEFT          &kp DOWN  &kp RIGHT           &none           &none &kp LC(LA(LSHIFT)) &kp LC(LS(LGUI))   &kp LC(LA(LS(LGUI))) &none
 			&none &kp LC(D)         &kp LC(X) &kp LC(C)           &kp LC(V)       &none &kp LCTRL          &kp LSHIFT         &kp LALT             &kp LGUI
 			                                  &none               &kp LSHIFT      &none &none 
+			>;
+		};
+
+		// Number layer
+		number_layer {
+			label = "Number";
+			bindings = <
+			&none &none &none             &none        &none           &kp PLUS   &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none 
+			&none &none &kp LC(LS(SPACE)) &kp LGUI     &none           &kp MINUS  &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &none
+			&none &none &none             &kp LA(LGUI) &none           &kp KP_DOT &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none
+			                              &none        &none           &lt SYMBOL_2 NUMBER_0       &none 
+			>;
+		};
+
+		// Symbol layer
+		symbol_layer {
+			label = "Symbol";
+			bindings = <
+			&none &none     &kp COLON    &kp LEFT_BRACE &none           &kp GRAVE    &kp LT    &kp GT    &kp DQT    &kp SQT
+			&none &kp PIPE2 &kp QUESTION &kp COLON      &kp DQT         &kp EXCL     &kp MINUS &kp PLUS  &kp EQUAL  &none
+			&none &none     &none        &none          &none           &kp QUESTION &kp BSLH  &kp STAR  &kp PIPE2  &none
+			                             &none          &none           &lt SYMBOL_2 SEMICOLON &none 
+			>;
+		};
+
+		// Function layer
+		function_layer {
+			label = "Function";
+			bindings = <
+			&none &none &none &none &none           &none &kp F1 &kp F2 &kp F3 &kp F4 
+			&none &none &none &none &none           &none &kp F5 &kp F6 &kp F7 &kp F8
+			&none &none &none &none &none           &none &kp F9 &kp F10 &kp F11 &kp F12
+			                  &none &none           &none &none 
+			>;
+		};
+
+		// Symbol 2 layer
+		symbol2_layer {
+			label = "Symbol 2";
+			bindings = <
+			&none &none &none &none &none           &none &none &none &none &none 
+			&none &none &none &none &none           &none &none &none &none &none
+			&none &none &none &none &none           &none &none &none &none &none
+			                  &none &none           &none &none 
 			>;
 		};
 
