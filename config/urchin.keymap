@@ -70,27 +70,28 @@
       key-positions = <RM1 RM2 RM3>;
       layers = <0>;
       bindings = <&kp LC(SPACE)>;
-    }
+    };
 			
     combo_language {
       timeout-ms = <HOVER_TIMEOUT>;
       key-positions = <LM1 LM2 LM3>;
       layers = <0>;
       bindings = <&kp LC(LS(SPACE))>;
-    }
+    };
+
     combo_enter {
       timeout-ms = <HOVER_TIMEOUT>;
       key-positions = <LH0 RH0>;
       layers = <0>;
       bindings = <&kp ENTER>;
-    }
+    };
 	
     combo_helperou {
       timeout-ms = <HOVER_TIMEOUT>;
       key-positions = <RT2 RT3>;
       layers = <0>;
       bindings = <&kp O &kp U>;
-    }
+    };
 	};
 
 	keymap {
