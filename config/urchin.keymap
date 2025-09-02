@@ -99,10 +99,10 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&kp W &kp L &kp Y &kp P   &kp B           &kp Z    &kp F &kp O     &kp U   &kp SEMICOLON 
-			&kp C &kp R &kp S &kp T   &kp G           &kp M    &kp N &kp E     &kp I   &kp A 
-			&kp Q &kp J &kp V &kp D   &kp K           &kp X    &kp H &kp SLASH &kp DOT &kp COMMA 
-			                  &kp ESC &kp SPACE       &kp BSPC &td_tab
+			&kp W    &kp L           &kp Y                &kp P            &kp B        &kp Z    &kp F            &kp O                &kp U           &kp SEMICOLON 
+			&kp C    &hm_l LALT R    &hm_shift_l LSHIFT S &hm_l LCTRL T    &kp G        &kp M    &hm_r RCTRL N    &hm_shift_r RSHIFT E &hm_r RALT I    &kp A 
+			&kp Q    &kp J           &kp V                &hm_l LGUI D     &kp K        &kp X    &hm_r RGUI H     &kp SLASH            &kp DOT         &kp COMMA 
+			                                              &kp ESC          &kp SPACE    &kp BSPC &td_tab
 			>;
 		};
 
@@ -110,7 +110,7 @@
 		movement_layer {
 			label = "Movement";
 			bindings = <
-			&none &kp LC(LEFT)      &kp UP    &kp LC(RIGHT)       &none           &none &kp KP_NUMBER_0       &kp DOLLAR         &none                &none 
+			&none &kp LC(LEFT)      &kp UP    &kp LC(RIGHT)       &none           &none &kp KP_NUMBER_0    &kp DOLLAR         &none                &none 
 			&none &kp LEFT          &kp DOWN  &kp RIGHT           &none           &none &kp LC(LA(LSHIFT)) &kp LC(LS(LGUI))   &kp LC(LA(LS(LGUI))) &none
 			&none &kp LC(D)         &kp LC(X) &kp LC(C)           &kp LC(V)       &none &kp LCTRL          &kp LSHIFT         &kp LALT             &kp LGUI
 			                                  &none               &kp LSHIFT      &none &none 
