@@ -99,6 +99,13 @@
       bindings = <&kp ESC>;
     };
 
+    combo_q {
+      timeout-ms = <HOVER_TIMEOUT>;
+      key-positions = <LB3 LB2>;
+      layers = <0>;
+      bindings = <&kp Q>;
+    };
+
     combo_w {
       timeout-ms = <HOVER_TIMEOUT>;
       key-positions = <LT3 LT2>;
@@ -162,7 +169,7 @@
             label = "Symbol";
             bindings = <
                 &none    &none     &kp COLON    &kp LEFT_BRACE &none         &kp GRAVE    &kp LT    &kp GT    &kp DQT    &kp SQT
-                &none    &kp PIPE2 &kp QUESTION &kp COLON      &kp DQT       &kp EXCL     &kp MINUS &kp PLUS  &kp EQUAL  &none
+                &none    &kp PIPE &kp QUESTION &kp COLON      &kp DQT       &kp EXCL     &kp MINUS &kp PLUS  &kp EQUAL  &none
                 &none    &none     &none        &none          &none         &kp QUESTION &kp BSLH  &kp STAR  &kp PIPE2  &none
                                                &none          &none         &lt SYMBOL_2 SEMICOLON  &none 
             >;
