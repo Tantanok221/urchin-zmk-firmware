@@ -66,8 +66,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp O &kp U>;
-  }
-		
+   };
 	};
 
 	combos {
@@ -107,7 +106,7 @@
         // Base alpha layer
         default_layer {
             label = "Base";
-            bindings = <
+            bindings = < 
                 &kp W    &kp L           &kp Y                &kp P            &kp B        &kp Z    &kp F            &kp O                &kp U           AS(SEMICOLON) 
                 &mt W C    &hm_l LALT R    &hm_shift_l LSHIFT S &hm_l LCTRL T    &kp G        &kp M    &hm_r RCTRL N    &hm_shift_r RSHIFT E &hm_r RALT I    &kp A 
                 &kp Q    &kp J           &kp V                &hm_l LGUI D     &kp K        &kp X    &hm_r RGUI H     &kp SLASH            &kp DOT         &kp COMMA 
