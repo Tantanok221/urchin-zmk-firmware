@@ -51,6 +51,7 @@
       bindings = <&kp>, <&kp>;
     };
 
+
     td_tab: tap_dance_0 {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
@@ -60,6 +61,12 @@
 	};
 
 	macros {
+    ou_combo: ou_combo {
+    compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp O &kp U>;
+  }
 		
 	};
 
@@ -90,7 +97,7 @@
       timeout-ms = <HOVER_TIMEOUT>;
       key-positions = <RT2 RT3>;
       layers = <0>;
-      bindings = <&kp O &kp U>;
+      bindings = <&ou_combo>;
     };
 	};
 
@@ -101,8 +108,8 @@
         default_layer {
             label = "Base";
             bindings = <
-                &kp W    &kp L           &kp Y                &kp P            &kp B        &kp Z    &kp F            &kp O                &kp U           &kp SEMICOLON 
-                &kp C    &hm_l LALT R    &hm_shift_l LSHIFT S &hm_l LCTRL T    &kp G        &kp M    &hm_r RCTRL N    &hm_shift_r RSHIFT E &hm_r RALT I    &kp A 
+                &kp W    &kp L           &kp Y                &kp P            &kp B        &kp Z    &kp F            &kp O                &kp U           AS(SEMICOLON) 
+                &mt W C    &hm_l LALT R    &hm_shift_l LSHIFT S &hm_l LCTRL T    &kp G        &kp M    &hm_r RCTRL N    &hm_shift_r RSHIFT E &hm_r RALT I    &kp A 
                 &kp Q    &kp J           &kp V                &hm_l LGUI D     &kp K        &kp X    &hm_r RGUI H     &kp SLASH            &kp DOT         &kp COMMA 
                                                               &lt SYMBOL ESC   &lt NUMBER SPACE     &lt MOVEMENT BSPC &td_tab
             >;
