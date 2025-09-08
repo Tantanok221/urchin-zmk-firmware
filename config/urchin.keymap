@@ -33,7 +33,7 @@
 
 // Macro
 #define AS(keycode) &as LS(keycode) keycode  
-#define ALL LC(LA(LS(LGUI)))
+#define HYPER LC(LA(LS(LGUI)))
 
 &sk {
 	// don't release mods on other mods presses
@@ -137,7 +137,7 @@
             bindings = < 
                 &kp W    &kp L           &kp Y                &kp P            &kp B        &kp Z    &kp F            &kp O                &kp U           AS(SEMICOLON) 
                 &mt W C    &hm_l LALT R    &hm_shift_l LSHIFT S &hm_l LCTRL T    &kp G        &kp M    &hm_r RCTRL N    &hm_shift_r RSHIFT E &hm_r RALT I    &kp A 
-                &kp Q    &kp J           &hm_shift_l ALL V                &hm_l LGUI D     &kp K        &kp X    &hm_r RGUI H     &hm_shift_l ALL SLASH            &kp DOT         &kp COMMA 
+                &kp Q    &kp J           &hm_shift_l HYPER V                &hm_l LGUI D     &kp K        &kp X    &hm_r RGUI H     &hm_shift_l HYPER SLASH            &kp DOT         &kp COMMA 
                                                               &lt SYMBOL ESC   &lt NUMBER SPACE     &lt MOVEMENT BSPC &td_tab
             >;
         };
