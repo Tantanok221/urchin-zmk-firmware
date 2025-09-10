@@ -137,7 +137,7 @@
             bindings = < 
                 &kp W    &kp L           &kp Y                &kp P            &kp B        &kp Z    &kp F            &kp O                &kp U           AS(SEMICOLON) 
                 &mt W C    &hm_l LALT R    &hm_shift_l LSHIFT S &hm_l LCTRL T    &kp G        &kp M    &hm_r RCTRL N    &hm_shift_r RSHIFT E &hm_r RALT I    &kp A 
-                &kp Q    &kp J           &hm_shift_l HYPER V                &hm_l LGUI D     &kp K        &kp X    &hm_r RGUI H     &hm_shift_l HYPER SLASH            &kp DOT         &kp COMMA 
+                &kp Q    &kp J           &hm_shift_l HYPER V                &hm_l LGUI D     &kp K        &kp X    &hm_r RGUI H     &hm_shift_l HYPER DOT &kp COMMA         &kp SLASH 
                                                               &lt SYMBOL ESC   &lt NUMBER SPACE     &lt MOVEMENT BSPC &td_tab
             >;
         };
@@ -171,7 +171,7 @@
                 &none    &none     &kp COLON    &kp LEFT_BRACE &none         &kp GRAVE    &kp LT    &kp GT    &kp DQT    &kp SQT
                 &none    &kp PIPE &kp QUESTION &kp COLON      &kp DQT       &kp EXCL     &kp MINUS &kp PLUS  &kp EQUAL  &none
                 &none    &none     &none        &none          &none         &kp QUESTION &kp BSLH  &kp STAR  &kp PIPE2  &none
-                                               &none          &none         &lt SYMBOL_2 SEMICOLON  &none 
+                                               &none          &none         &lt SYMBOL_2 SEMICOLON  &lt SETTINGS SPACE 
             >;
         };
 
@@ -182,7 +182,7 @@
                 &none    &none          &msc SCRL_UP   &none           &none         &none    &kp F1  &kp F2  &kp F3  &kp F4 
                 &none    &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &none         &none    &kp F5  &kp F6  &kp F7  &kp F8
                 &kp PSCRN &none          &none          &none           &none         &none    &kp F9  &kp F10 &kp F11 &kp F12
-                                                      &none           &none         &lt SETTINGS SPACE  &none 
+                                                      &lt SETTINGS SPACE &none         &lt SETTINGS SPACE  &none 
             >;
         };
 
