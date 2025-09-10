@@ -23,12 +23,14 @@
 
 // Layer definitions
 #define BASE 0
-#define MOVEMENT 1 
-#define NUMBER 2 
-#define SYMBOL 3 
-#define FUNCTION 4 
-#define SYMBOL_2 5 
-#define SETTINGS 6 
+#define MAC_BASE 1 
+#define MOVEMENT 2 
+#define MAC_MOVEMENT 3 
+#define NUMBER 4
+#define SYMBOL 5 
+#define FUNCTION 6 
+#define SYMBOL_2 7 
+#define SETTINGS 8 
 // -----------------
 
 // Macro
@@ -78,6 +80,13 @@
       layers = <0>;
       bindings = <&kp LC(SPACE)>;
     };
+
+	  combo_mac_launcher {
+      timeout-ms = <HOVER_TIMEOUT>;
+      key-positions = <RM1 RM2 RM3>;
+      layers = <1>;
+      bindings = <&kp LG(SPACE)>;
+    };
 			
     combo_language {
       timeout-ms = <HOVER_TIMEOUT>;
@@ -86,45 +95,52 @@
       bindings = <&kp LC(LS(SPACE))>;
     };
 
+    combo_mac_language {
+      timeout-ms = <HOVER_TIMEOUT>;
+      key-positions = <LM1 LM2 LM3>;
+      layers = <1>;
+      bindings = <&kp GLOBE>; 
+    };
+
     combo_enter {
       timeout-ms = <HOVER_TIMEOUT>;
       key-positions = <LH0 RH0>;
-      layers = <0>;
+      layers = <0 1>;
       bindings = <&kp ENTER>;
     };
 	
     combo_esc {
       timeout-ms = <HOVER_TIMEOUT>;
       key-positions = <LT1 LT2>;
-      layers = <0>;
+      layers = <0 1>;
       bindings = <&kp ESC>;
     };
 
     combo_q {
       timeout-ms = <HOVER_TIMEOUT>;
       key-positions = <LB3 LB2>;
-      layers = <0>;
+      layers = <0 1>;
       bindings = <&kp Q>;
     };
 
     combo_w {
       timeout-ms = <HOVER_TIMEOUT>;
       key-positions = <LT3 LT2>;
-      layers = <0>;
+      layers = <0 1>;
       bindings = <&kp W>;
     };
 
     combo_repeat {
       timeout-ms = <HOVER_TIMEOUT>;
       key-positions = <RT1 RT2>;
-      layers = <0>;
+      layers = <0 1>;
       bindings = <&key_repeat>;
     };
 
     combo_helperou {
       timeout-ms = <HOVER_TIMEOUT>;
       key-positions = <RT2 RT3>;
-      layers = <0>;
+      layers = <0 1>;
       bindings = <&ou_combo>;
     };
 	};
@@ -135,11 +151,22 @@
         // Base alpha layer
         default_layer {
             label = "Base";
-            bindings = < 
-                &kp W    &kp L           &kp Y                &kp P            &kp B        &kp Z    &kp F            &kp O                &kp U           AS(SEMICOLON) 
-                &mt W C    &hm_l LALT R    &hm_shift_l LSHIFT S &hm_l LCTRL T    &kp G        &kp M    &hm_r RCTRL N    &hm_shift_r RSHIFT E &hm_r RALT I    &kp A 
-                &kp Q    &kp J           &hm_shift_l HYPER V                &hm_l LGUI D     &kp K        &kp X    &hm_r RGUI H     &hm_shift_l HYPER DOT &kp COMMA         &kp SLASH 
-                                                              &lt SYMBOL ESC   &lt NUMBER SPACE     &lt MOVEMENT BSPC &td_tab
+            bindings = <
+                &kp W      &kp L                 &kp Y                  &kp P            &kp B             &kp Z   &kp F                  &kp O                   &kp U            AS(SEMICOLON)
+                &mt W C    &hm_l LALT R          &hm_shift_l LSHIFT S   &hm_l LCTRL T    &kp G             &kp M   &hm_r RCTRL N          &hm_shift_r RSHIFT E    &hm_r RALT I     &kp A
+                &kp Q      &kp J                 &hm_shift_l HYPER V    &hm_l LGUI D     &kp K             &kp X   &hm_r RGUI H           &hm_shift_l HYPER DOT   &kp COMMA        AS(SLASH)
+                                                                        &lt SYMBOL ESC   &lt NUMBER SPACE  &lt MOVEMENT BSPC       &td_tab
+            >;
+        };
+ 
+        // Base mac alpha layer
+        defaultmac_layer {
+            label = "M-Base";
+            bindings = <
+                &kp W      &kp L                 &kp Y                  &kp P             &kp B             &kp Z   &kp F                  &kp O                   &kp U            AS(SEMICOLON)
+                &mt W C    &hm_l LALT R          &hm_shift_l LSHIFT S   &hm_l LGUI T      &kp G             &kp M   &hm_r RGUI N           &hm_shift_r RSHIFT E    &hm_r RALT I     &kp A
+                &kp Q      &kp J                 &hm_shift_l HYPER V    &hm_l LCTRL D     &kp K             &kp X   &hm_r RCTRL H          &hm_shift_l HYPER DOT   &kp COMMA        AS(SLASH)
+                                                                        &lt SYMBOL ESC    &lt NUMBER SPACE  &lt MAC_MOVEMENT BSPC       &td_tab
             >;
         };
 
@@ -150,6 +177,17 @@
                 &none    &kp LC(LEFT)      &kp UP    &kp LC(RIGHT)       &kp PG_UP     &none    &kp KP_NUMBER_0    &kp DOLLAR         &none                &none 
                 &none    &kp LEFT          &kp DOWN  &kp RIGHT           &kp PG_DN     &none    &kp LC(LA(LSHIFT)) &kp LC(LS(LGUI))   &kp LC(LA(LS(LGUI))) &none
                 &none    &kp LC(D)         &kp LC(X) &kp LC(C)           &kp LC(V)     &none    &kp LCTRL          &kp LSHIFT         &kp LALT             &kp LGUI
+                                                     &none               &kp LSHIFT    &none    &none 
+            >;
+        };
+
+        // Movement mac layer
+        macmovement_layer {
+            label = "M-Movement";
+            bindings = <
+                &none    &kp LG(LEFT)      &kp UP    &kp LG(RIGHT)       &kp PG_UP     &none    &kp KP_NUMBER_0    &kp DOLLAR         &none                &none 
+                &none    &kp LEFT          &kp DOWN  &kp RIGHT           &kp PG_DN     &none    &kp LC(LA(LSHIFT)) &kp LC(LS(LGUI))   &kp LC(LA(LS(LGUI))) &none
+                &none    &kp LG(D)         &kp LG(X) &kp LG(C)           &kp LG(V)     &none    &kp LCTRL          &kp LSHIFT         &kp LALT             &kp LGUI
                                                      &none               &kp LSHIFT    &none    &none 
             >;
         };
@@ -202,8 +240,8 @@
         settings_layer {
             label = "Sett.";
             bindings = <
-                &bootloader    &none    &none    &bt BT_CLR   &bt BT_SEL 0     &bt BT_SEL 3 &none    &none    &none    &bootloader 
-                &none          &none    &none    &none        &bt BT_SEL 1     &bt BT_SEL 4 &none    &none    &none    &none
+                &bootloader    &none    &none    &none        &bt BT_SEL 0     &bt BT_SEL 3 &none    &none    &none    &bootloader 
+                &bt BT_CLR     &none    &none    &none        &bt BT_SEL 1     &bt BT_SEL 4 &none    &none    &none    &bt BT_CLR
                 &studio_unlock &none    &none    &none        &bt BT_SEL 2     &bt BT_SEL 5 &none    &none    &none    &studio_unlock
                                                  &none        &none            &none        &none 
             >;
