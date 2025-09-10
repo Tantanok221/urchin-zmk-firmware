@@ -59,6 +59,7 @@
       tapping-term-ms = <200>;
       bindings = <&lt FUNCTION TAB>, <&kp LC(LA(LS(TAB)))>;
     };
+  };
 
 	macros {
     ou_combo: ou_combo {
