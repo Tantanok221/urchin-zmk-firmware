@@ -143,6 +143,22 @@
       layers = <0 1>;
       bindings = <&ou_combo>;
     };
+
+    combo_settingl {
+      timeout-ms = <HOVER_TIMEOUT>;
+      key-positions = <LH1 LH0>;
+      layers = <0 1>;
+      bindings = <&mo SETTINGS>;
+    };
+    
+    combo_settingr {
+      timeout-ms = <HOVER_TIMEOUT>;
+      key-positions = <RH1 RH0>;
+      layers = <0 1>;
+      bindings = <&mo SETTINGS>;
+    };
+
+
 	};
 
     keymap {
@@ -210,7 +226,7 @@
                 &none    &none     &kp COLON    &kp LEFT_BRACE &none         &kp GRAVE    &kp LT    &kp GT    &kp DQT    &kp SQT
                 &none    &kp PIPE &kp QUESTION &kp COLON      &kp DQT       &kp EXCL     &kp MINUS &kp PLUS  &kp EQUAL  &none
                 &none    &none     &none        &none          &none         &kp QUESTION &kp BSLH  &kp STAR  &kp PIPE2  &none
-                                               &none          &none         &lt SYMBOL_2 SEMICOLON  &lt SETTINGS SPACE 
+                                               &none          &none         &lt SYMBOL_2 SEMICOLON  &mo SETTINGS 
             >;
         };
 
@@ -221,7 +237,7 @@
                 &none    &none          &msc SCRL_UP   &none           &none         &none    &kp F1  &kp F2  &kp F3  &kp F4 
                 &none    &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &none         &none    &kp F5  &kp F6  &kp F7  &kp F8
                 &kp PSCRN &none          &none          &none           &none         &none    &kp F9  &kp F10 &kp F11 &kp F12
-                                                      &lt SETTINGS SPACE &none         &lt SETTINGS SPACE  &none 
+                                                      &lt SETTINGS SPACE &none         &mo SETTINGS &none 
             >;
         };
 
